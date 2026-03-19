@@ -1,0 +1,350 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | UoaliCode</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-bg"></div>
+
+  <header class="site-header">
+    <nav class="nav-card container">
+      <a href="#" class="brand">Portfo<span>lio.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#references">References</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class='bx bx-moon'></i></button>
+        <button class="hire-btn">Hire Me</button>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <i class='bx bx-menu'></i>
+      </button>
+    </nav>
+  </header>
+
+  <main class="hero container" id="home">
+    <section class="hero-text">
+      <h1>Hi, I'm <span>Talab Reach</span></h1>
+      <h2>I build <span id="typingWord">Web Apps</span></h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A error quasi sit
+        libero? Laborum hic commodi architecto ex eligendi quasi.
+      </p>
+      <div class="socials">
+        <a href="https://t.me/reach_db_rtk" aria-label="Telegram" class="social-telegram"><img src="images/telegram.png" alt="Telegram" class="social-image" /></a>
+        <a href="https://www.tiktok.com/@reach_solo?_r=1&_t=ZS-94muykrzkm8" aria-label="Tiktok"><img src="images/tiktok.png" alt="Tiktok" class="social-image"></a>
+        <a href="https://www.linkedin.com/in/talab-reach-a647043a1/" aria-label="Linkedin"><img src="images/Linkedin.png" alt="Linkedin" class="social-image"></a>
+        <a href="https://www.facebook.com/share/18YzfnSw6x/?mibextid=wwXIfr" aria-label="Facebook"><img src="images/feckbook.png" alt="Facebook" class="social-image" /></a>
+      </div>
+      <div class="cta-buttons">
+        <a href="#" class="btn primary"><i class='bx bx-download'></i> Download CV</a>
+        <a href="#contact" class="btn ghost"><i class='bx bx-envelope'></i> Contact Me</a>
+      </div>
+    </section>
+
+    <section class="hero-art" aria-hidden="true">
+      <div class="avatar-wrap">
+        <img src="images/reachPicture1.png" alt="UoaliCode portrait" class="profile-image" />
+      </div>
+    </section>
+  </main>
+
+  <section id="about" class="about-board container">
+    <div class="about-visual">
+      <img src="images/reachPicture1.png" alt="Talab Reach about" class="about-avatar" />
+    </div>
+    <div class="about-content">
+      <h3>About <span>Me</span></h3>
+      <p>
+       Hello! I'm a passionate web development student. With strong motivation and hands-on experience 
+       in real-world system projects, I specialize in building responsive and user-friendly web applications.
+        I am currently studying HTML, CSS, SASS, JavaScript,React, Node Js, Laravel, PHP, Phython ,and RESTful API development. My journey in 
+        tech started with curiosity and quickly grew into a passion for creating practical, real-world solutions
+      </p>
+      <div class="about-stats">
+        <div><strong>5+</strong><span>Projects</span></div>
+        <div><strong>10+</strong><span>Certificates</span></div>
+        <div><strong>3000+</strong><span>Hours Learned</span></div>
+      </div>
+      <a href="#contact" class="about-btn">Learn More</a>
+    </div>
+  </section>
+
+  <section id="skills" class="skills-board container">
+    <h3 class="skills-title">My Skills</h3>
+    <p class="skills-subtitle">Technologies and tools I work with to create amazing web experiences.</p>
+
+    <div class="skills-grid">
+      <article class="skill-card">
+        <div class="skill-head">
+          <span class="skill-brand"><img class="skill-logo" src="https://cdn.simpleicons.org/laravel/FF2D20" alt="Laravel logo" /> Laravel</span>
+          <span class="skill-level">85%</span>
+        </div>
+        <p class="skill-meta">Proficiency</p>
+        <div class="skill-track"><span style="--p: 85%; --c: #f97316;"></span></div>
+      </article>
+
+      <article class="skill-card">
+        <div class="skill-head">
+          <span class="skill-brand"><img class="skill-logo" src="https://cdn.simpleicons.org/framer/0055FF" alt="Framer logo" /> Framer Motion</span>
+          <span class="skill-level">80%</span>
+        </div>
+        <p class="skill-meta">Proficiency</p>
+        <div class="skill-track"><span style="--p: 80%; --c: #0ea5e9;"></span></div>
+      </article>
+
+      <article class="skill-card">
+        <div class="skill-head">
+          <span class="skill-brand"><img class="skill-logo" src="https://cdn.simpleicons.org/vuedotjs/4FC08D" alt="Vue logo" /> Vue</span>
+          <span class="skill-level">70%</span>
+        </div>
+        <p class="skill-meta">Proficiency</p>
+        <div class="skill-track"><span style="--p: 70%; --c: #22c55e;"></span></div>
+      </article>
+
+      <article class="skill-card">
+        <div class="skill-head">
+          <span class="skill-brand"><img class="skill-logo" src="https://cdn.simpleicons.org/react/61DAFB" alt="React logo" /> React</span>
+          <span class="skill-level">90%</span>
+        </div>
+        <p class="skill-meta">Proficiency</p>
+        <div class="skill-track"><span style="--p: 90%; --c: #3b82f6;"></span></div>
+      </article>
+
+      <article class="skill-card">
+        <div class="skill-head">
+          <span class="skill-brand"><img class="skill-logo" src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="Tailwind logo" /> Tailwind CSS</span>
+          <span class="skill-level">88%</span>
+        </div>
+        <p class="skill-meta">Proficiency</p>
+        <div class="skill-track"><span style="--p: 88%; --c: #06b6d4;"></span></div>
+      </article>
+
+      <article class="skill-card">
+        <div class="skill-head">
+          <span class="skill-brand"><img class="skill-logo" src="https://cdn.simpleicons.org/firebase/FFCA28" alt="Firebase logo" /> Firebase</span>
+          <span class="skill-level">82%</span>
+        </div>
+        <p class="skill-meta">Proficiency</p>
+        <div class="skill-track"><span style="--p: 82%; --c: #10b981;"></span></div>
+      </article>
+
+      <article class="skill-card">
+        <div class="skill-head">
+          <span class="skill-brand"><img class="skill-logo" src="https://cdn.simpleicons.org/python/3776AB" alt="Python logo" /> Python</span>
+          <span class="skill-level">86%</span>
+        </div>
+        <p class="skill-meta">Proficiency</p>
+        <div class="skill-track"><span style="--p: 86%; --c: #6366f1;"></span></div>
+      </article>
+
+      <article class="skill-card">
+        <div class="skill-head">
+          <span class="skill-brand"><img class="skill-logo" src="https://cdn.simpleicons.org/vite/646CFF" alt="Vite logo" /> Vite</span>
+          <span class="skill-level">78%</span>
+        </div>
+        <p class="skill-meta">Proficiency</p>
+        <div class="skill-track"><span style="--p: 78%; --c: #f97316;"></span></div>
+      </article>
+
+      <article class="skill-card">
+        <div class="skill-head">
+          <span class="skill-brand"><img class="skill-logo" src="https://cdn.simpleicons.org/php/777BB4" alt="PHP logo" /> PHP</span>
+          <span class="skill-level">84%</span>
+        </div>
+        <p class="skill-meta">Proficiency</p>
+        <div class="skill-track"><span style="--p: 84%; --c: #777BB4;"></span></div>
+      </article>
+
+      <article class="skill-card">
+        <div class="skill-head">
+          <span class="skill-brand"><img class="skill-logo" src="https://cdn.simpleicons.org/nodedotjs/339933" alt="Node.js logo" /> Node.js</span>
+          <span class="skill-level">87%</span>
+        </div>
+        <p class="skill-meta">Proficiency</p>
+        <div class="skill-track"><span style="--p: 87%; --c: #339933;"></span></div>
+      </article>
+
+      <article class="skill-card">
+        <div class="skill-head">
+          <span class="skill-brand"><img class="skill-logo" src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML logo" /> HTML</span>
+          <span class="skill-level">95%</span>
+        </div>
+        <p class="skill-meta">Proficiency</p>
+        <div class="skill-track"><span style="--p: 95%; --c: #E34F26;"></span></div>
+      </article>
+
+      <article class="skill-card">
+        <div class="skill-head">
+          <span class="skill-brand"><img class="skill-logo" src="https://cdn.simpleicons.org/github/181717" alt="GitHub logo" /> GitHub</span>
+          <span class="skill-level">88%</span>
+        </div>
+        <p class="skill-meta">Proficiency</p>
+        <div class="skill-track"><span style="--p: 88%; --c: #111827;"></span></div>
+      </article>
+
+      <article class="skill-card">
+        <div class="skill-head">
+          <span class="skill-brand"><img class="skill-logo" src="https://cdn.simpleicons.org/jira/0052CC" alt="Jira logo" /> Jira</span>
+          <span class="skill-level">80%</span>
+        </div>
+        <p class="skill-meta">Proficiency</p>
+        <div class="skill-track"><span style="--p: 80%; --c: #0052CC;"></span></div>
+      </article>
+
+      <article class="skill-card">
+        <div class="skill-head">
+          <span class="skill-brand"><img class="skill-logo" src="https://cdn.simpleicons.org/amazonaws/FF9900" alt="AWS logo" /> AWS</span>
+          <span class="skill-level">75%</span>
+        </div>
+        <p class="skill-meta">Proficiency</p>
+        <div class="skill-track"><span style="--p: 75%; --c: #FF9900;"></span></div>
+      </article>
+
+      <article class="skill-card">
+        <div class="skill-head">
+          <span class="skill-brand"><img class="skill-logo" src="https://cdn.simpleicons.org/wordpress/21759B" alt="WordPress logo" /> WordPress</span>
+          <span class="skill-level">83%</span>
+        </div>
+        <p class="skill-meta">Proficiency</p>
+        <div class="skill-track"><span style="--p: 83%; --c: #21759B;"></span></div>
+      </article>
+
+      <article class="skill-card">
+        <div class="skill-head">
+          <span class="skill-brand"><img class="skill-logo" src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL logo" /> MySQL</span>
+          <span class="skill-level">82%</span>
+        </div>
+        <p class="skill-meta">Proficiency</p>
+        <div class="skill-track"><span style="--p: 82%; --c: #4479A1;"></span></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="projects" class="projects-board container">
+    <h3 class="projects-title">My <span>Projects</span></h3>
+    <p class="projects-subtitle">A showcase of my recent work</p>
+    <div class="projects-grid">
+      <article class="project-card">
+        <img src="images/image/ring.png" alt="E-commerce platform project" class="project-image" />
+        <h4>Service Selling Unique Ring ( VC1 )</h4>
+        <p>Modern online shop with product listing and secure checkout.</p>
+        <div class="project-meta"><span><i class='bx bx-code-alt'></i> React Node Js with Mysql</span><a href="#" class="project-btn">View</a></div>
+      </article>
+      <article class="project-card">
+        <img src="images/image/managementSystem.png" alt="Fitness tracker app project" class="project-image" />
+        <h4>Task management System</h4>
+        <p>Track workouts, calories, and activity with real-time charts.</p>
+        <div class="project-meta"><span><i class='bx bx-code-alt'></i> Vue</span><a href="https://vermillion-salmiakki-402c25.netlify.app/" class="project-btn">View</a></div>
+      </article>
+      <article class="project-card">
+        <img src="https://picsum.photos/seed/ai/640/360" alt="AI content generator project" class="project-image" />
+        <h4>AI Content Generator</h4>
+        <p>Generate posts and captions using prompt-based smart tools.</p>
+        <div class="project-meta"><span><i class='bx bx-code-alt'></i> Node.js</span><a href="#" class="project-btn">View</a></div>
+      </article>
+      <article class="project-card">
+        <img src="https://picsum.photos/seed/dashboard/640/360" alt="Crypto dashboard project" class="project-image" />
+        <h4>Crypto Dashboard</h4>
+        <p>Live market stats and portfolio summary in one clean interface.</p>
+        <div class="project-meta"><span><i class='bx bx-code-alt'></i> React</span><a href="#" class="project-btn">View</a></div>
+      </article>
+      <article class="project-card">
+        <img src="https://picsum.photos/seed/task/640/360" alt="Task management project" class="project-image" />
+        <h4>Task Management</h4>
+        <p>Plan and organize team tasks with boards, tags, and deadlines.</p>
+        <div class="project-meta"><span><i class='bx bx-code-alt'></i> Laravel</span><a href="#" class="project-btn">View</a></div>
+      </article>
+      <article class="project-card">
+        <img src="https://picsum.photos/seed/realestate/640/360" alt="Real estate platform project" class="project-image" />
+        <h4>Real Estate Platform</h4>
+        <p>Property listing portal with search filters and agent profiles.</p>
+        <div class="project-meta"><span><i class='bx bx-code-alt'></i> Next.js</span><a href="#" class="project-btn">View</a></div>
+      </article>
+    </div>
+    <div class="projects-actions">
+      <a href="#" class="projects-more">View All Projects</a>
+    </div>
+  </section>
+
+  <section id="references" class="references-board container">
+    <h3 class="references-title">References</h3>
+    <p class="references-subtitle">People who have taught me and can vouch for my skills and character.</p>
+    <div class="references-grid">
+      <article class="reference-card">
+        <div class="reference-avatar-ring">
+          <img src="images/Leab.png" alt="Sovanchansreyleap Kheng" class="reference-avatar" />
+        </div>
+        <h4>Sovanchansreyleap Kheng</h4>
+        <p class="reference-role">PNC English Trainer</p>
+        <p class="reference-line"><i class='bx bxs-phone'></i> +855 78 819 152</p>
+        <p class="reference-line"><i class='bx bxs-envelope'></i> sovanchansreyleap@gmail.com</p>
+      </article>
+
+      <article class="reference-card">
+        <div class="reference-avatar-ring">
+          <img src="images/Him.png" alt="Hey Him" class="reference-avatar" />
+        </div>
+        <h4>Hey Him</h4>
+        <p class="reference-role">PNC Web Trainer</p>
+        <p class="reference-line"><i class='bx bxs-phone'></i> +855 88 609 9466</p>
+        <p class="reference-line"><i class='bx bxs-envelope'></i> heyhim99@gmail.com</p>
+      </article>
+
+      <article class="reference-card">
+        <div class="reference-avatar-ring">
+          <img src="images/puthy.png" alt="Putthy Kry" class="reference-avatar" />
+        </div>
+        <h4>Putthy Kry</h4>
+        <p class="reference-role">PNC Professional Life Trainer</p>
+        <p class="reference-line"><i class='bx bxs-phone'></i> +855 12 376 863</p>
+        <p class="reference-line"><i class='bx bxs-envelope'></i> putthy.kry@passerellesnumeriques.org</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-board container">
+    <h3 class="contact-title">Get In <span>Touch</span></h3>
+    <p class="contact-subtitle">Let's discuss your project</p>
+
+    <div class="contact-main">
+      <form class="contact-form" id="contactForm" action="#" method="post">
+        <div class="form-row">
+          <input type="text" placeholder="First Name" />
+          <input type="text" placeholder="Last Name" />
+        </div>
+        <input type="email" placeholder="Email Address" />
+        <input type="tel" placeholder="Phone Number" />
+        <textarea rows="4" placeholder="Your Message"></textarea>
+        <button type="submit" class="contact-send">Send Message</button>
+        <p id="contactSuccess" class="contact-success" role="status" aria-live="polite">Your message was sent successfully.</p>
+      </form>
+    </div>
+
+    <div class="contact-footer">
+      <p>© 2026 Talab Reach | Web Developer</p>
+      <div class="contact-icons">
+        <a href="https://t.me/reach_db_rtk" aria-label="Telegram"><img src="images/telegram.png" alt="Telegram" class="contact-social-image" /></a>
+        <a href="https://www.linkedin.com/in/talab-reach-a647043a1/" aria-label="LinkedIn"><img src="images/Linkedin.png" alt="LinkedIn" class="contact-social-image" /></a>
+        <a href="https://www.tiktok.com/@reach_solo?_r=1&_t=ZS-94muykrzkm8" aria-label="TikTok"><img src="images/tiktok.png" alt="TikTok" class="contact-social-image" /></a>
+        <a href="https://www.facebook.com/share/18YzfnSw6x/?mibextid=wwXIfr" aria-label="Facebook"><img src="images/feckbook.png" alt="Facebook" class="contact-social-image" /></a>
+      </div>
+      <p>Built with HTML, CSS & JS</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
