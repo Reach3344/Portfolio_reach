@@ -17,6 +17,9 @@ const projectCards = document.querySelectorAll(".project-card");
 const themeToggle = document.getElementById("themeToggle");
 const contactForm = document.getElementById("contactForm");
 const contactSuccess = document.getElementById("contactSuccess");
+const sendConfirmModal = document.getElementById("sendConfirmModal");
+const confirmCancel = document.getElementById("confirmCancel");
+const confirmSend = document.getElementById("confirmSend");
 
 let wordIndex = 0;
 if (typingWord) {
@@ -114,14 +117,55 @@ if (themeToggle) {
 }
 
 if (contactForm && contactSuccess) {
-  contactForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    contactSuccess.classList.add("show");
-    contactForm.reset();
+  const askSendConfirmation = () =>
+    new Promise((resolve) => {
+      if (!sendConfirmModal || !confirmCancel || !confirmSend) {
+        resolve(true);
+        return;
+      }
 
-    setTimeout(() => {
-      contactSuccess.classList.remove("show");
-    }, 3000);
+      sendConfirmModal.classList.add("show");
+      sendConfirmModal.setAttribute("aria-hidden", "false");
+
+      const close = (decision) => {
+        sendConfirmModal.classList.remove("show");
+        sendConfirmModal.setAttribute("aria-hidden", "true");
+        confirmCancel.removeEventListener("click", onCancel);
+        confirmSend.removeEventListener("click", onSend);
+        sendConfirmModal.removeEventListener("click", onBackdrop);
+        resolve(decision);
+      };
+
+      const onCancel = () => close(false);
+      const onSend = () => close(true);
+      const onBackdrop = (event) => {
+        if (event.target === sendConfirmModal) {
+          close(false);
+        }
+      };
+
+      confirmCancel.addEventListener("click", onCancel);
+      confirmSend.addEventListener("click", onSend);
+      sendConfirmModal.addEventListener("click", onBackdrop);
+    });
+
+  contactForm.addEventListener("submit", (event) => {
+    const submitHandler = async () => {
+      const isConfirmed = await askSendConfirmation();
+      if (!isConfirmed) {
+        return;
+      }
+
+      contactSuccess.classList.add("show");
+      contactForm.reset();
+
+      setTimeout(() => {
+        contactSuccess.classList.remove("show");
+      }, 3000);
+    };
+
+    event.preventDefault();
+    submitHandler();
   });
 }
 
