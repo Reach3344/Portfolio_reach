@@ -1046,14 +1046,15 @@ background: linear-gradient(140deg, #080c23);
     padding: 12.8px;
     flex-direction: column;
     min-width: 170px;
-    transform: scale(0.95);
+    transform: translateX(26px);
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.2s ease, transform 0.2s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    will-change: transform, opacity;
   }
 
   .nav-links.open {
-    transform: scale(1);
+    transform: translateX(0);
     opacity: 1;
     pointer-events: auto;
   }
@@ -1073,6 +1074,14 @@ background: linear-gradient(140deg, #080c23);
   .hero {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  .hero-art {
+    order: 1;
+  }
+
+  .hero-text {
+    order: 2;
   }
 
   .socials,
