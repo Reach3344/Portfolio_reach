@@ -1,23 +1,50 @@
-﻿const words = ["Web Apps", "UI Design", "Frontend Magic", "Brand Websites"];
+const words = [
+  "Web Developer",
+  "Ux Design",
+  "Quality Assurance",
+  "Web App",
+  "Forntend Developer",
+  "Backend Develpoer",
+];
 const typingWord = document.getElementById("typingWord");
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 const navAnchors = document.querySelectorAll(".nav-links a");
 const skillsSection = document.getElementById("skills");
 const skillCards = document.querySelectorAll(".skill-card");
+const projectsSection = document.getElementById("projects");
+const projectCards = document.querySelectorAll(".project-card");
 const themeToggle = document.getElementById("themeToggle");
 const contactForm = document.getElementById("contactForm");
 const contactSuccess = document.getElementById("contactSuccess");
 
 let wordIndex = 0;
-setInterval(() => {
-  wordIndex = (wordIndex + 1) % words.length;
-  typingWord.style.opacity = "0";
-  setTimeout(() => {
-    typingWord.textContent = words[wordIndex];
-    typingWord.style.opacity = "1";
-  }, 180);
-}, 2200);
+if (typingWord) {
+  const typeWord = (word, speed = 140) =>
+    new Promise((resolve) => {
+      typingWord.textContent = "";
+      let i = 0;
+      const timer = setInterval(() => {
+        typingWord.textContent += word[i];
+        i += 1;
+        if (i >= word.length) {
+          clearInterval(timer);
+          resolve();
+        }
+      }, speed);
+    });
+
+  const runTypingLoop = async () => {
+    while (true) {
+      const currentWord = words[wordIndex];
+      await typeWord(currentWord);
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+      wordIndex = (wordIndex + 1) % words.length;
+    }
+  };
+
+  runTypingLoop();
+}
 
 menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("open");
@@ -35,6 +62,10 @@ skillCards.forEach((card, index) => {
   card.style.setProperty("--delay", `${index * 90}ms`);
 });
 
+projectCards.forEach((card, index) => {
+  card.style.setProperty("--delay", `${index * 110}ms`);
+});
+
 if (skillsSection && skillCards.length) {
   const observer = new IntersectionObserver(
     (entries) => {
@@ -49,6 +80,22 @@ if (skillsSection && skillCards.length) {
   );
 
   observer.observe(skillsSection);
+}
+
+if (projectsSection && projectCards.length) {
+  const projectsObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          projectCards.forEach((card) => card.classList.add("in-view"));
+          projectsObserver.unobserve(projectsSection);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  projectsObserver.observe(projectsSection);
 }
 
 if (themeToggle) {
@@ -77,3 +124,4 @@ if (contactForm && contactSuccess) {
     }, 3000);
   });
 }
+

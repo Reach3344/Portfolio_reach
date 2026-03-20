@@ -1,23 +1,23 @@
-# Portfolio_reach
+# Talab Reach Portfolio
 
-Personal portfolio website for Talab Reach, built with HTML, CSS, and JavaScript.
+Personal portfolio website for **Talab Reach**, built with HTML, CSS, and JavaScript.
 
-## Overview
+## Live Sections
 
-This is a responsive single-page portfolio that presents:
-- Hero section with social links and call-to-action buttons
-- About section
-- Skills section with animated progress bars
-- Projects and references sections
-- Contact section with success message feedback
-- Light/Dark theme toggle with localStorage persistence
+- Hero with animated role text
+- About me
+- Skills with animated progress bars
+- Project showcase cards
+- References
+- Contact form with success feedback
+- Light/Dark theme toggle (saved with `localStorage`)
 
 ## Tech Stack
 
 - HTML5
 - CSS3
 - Vanilla JavaScript
-- Boxicons CDN
+- [Boxicons](https://boxicons.com/)
 - Google Fonts (Space Grotesk)
 
 ## Project Structure
@@ -28,42 +28,66 @@ Portfolio_reach/
 |- style.css
 |- script.js
 |- images/
+   |- image/
 ```
+
+## Screenshots
+
+Hero:
+
+![Hero Preview](images/reachPicture1.png)
+
+Projects:
+
+![Projects Preview](images/image/managementSystem.png)
 
 ## Run Locally
 
-1. Clone or download the project.
-2. Open `index.html` directly in your browser.
+1. Clone or download this repository.
+2. Open `index.html` in your browser.
 
-Optional (recommended): run with a local server for smoother asset loading.
+Recommended (for best development workflow):
 
-Example with VS Code Live Server:
-1. Install the Live Server extension.
-2. Right-click `index.html`.
-3. Click **Open with Live Server**.
+1. Open project in VS Code.
+2. Install the **Live Server** extension.
+3. Right-click `index.html`.
+4. Click **Open with Live Server**.
 
-## Customization
+## Customization Guide
 
-Update these files to personalize your portfolio:
+### `index.html`
 
-- `index.html`
-  - Name, title, bio text
-  - Social links (Telegram, TikTok, LinkedIn, Facebook)
-  - Buttons like **Download CV** and **Contact Me**
-  - Skills, projects, references, and contact info
-- `style.css`
-  - Colors, spacing, typography, animations, layout
-- `script.js`
-  - Typing words in hero section
-  - Theme toggle behavior
-  - Mobile menu behavior
-  - Contact form success alert timing
+- Update name, headline, and bio
+- Replace social media URLs
+- Edit skills, project cards, and references
+- Change contact details
+
+### `style.css`
+
+- Adjust colors, spacing, typography, and animation
+- Edit responsive breakpoints
+- Fine-tune hover and card effects
+
+### `script.js`
+
+- Change rotating/typing role words
+- Adjust typing speed and delay
+- Theme toggle behavior
+- Scroll reveal behavior for cards
+- Contact success message timing
+
+## Assets
+
+- Profile and social icons are stored in `images/`
+- Project thumbnails and CV image are stored in `images/image/`
+- Current CV download source:
+  - `images/image/CV (6).jpg`
 
 ## Notes
 
-- The **Download CV** button is currently set to `href="#"`. Replace it with your real CV file path.
-- Make sure all images in `images/` match the file names used in `index.html`.
+- This is a static portfolio (no backend required).
+- For production hosting, you can deploy to Netlify, Vercel, or GitHub Pages.
 
 ## License
 
-This project is for personal portfolio use.
+This project is intended for personal portfolio use.
