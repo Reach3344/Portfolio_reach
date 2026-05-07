@@ -14,6 +14,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Space Grotesk", sans-serif;
   color: var(--text);
@@ -33,6 +37,15 @@ body {
 .container {
   width: min(1120px, 92%);
   margin-inline: auto;
+}
+
+#home,
+#about,
+#skills,
+#projects,
+#references,
+#contact {
+  scroll-margin-top: 118px;
 }
 
 .site-header {

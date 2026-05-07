@@ -10,6 +10,10 @@ const typingWord = document.getElementById("typingWord");
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 const navAnchors = document.querySelectorAll(".nav-links a");
+const scrollLinks = document.querySelectorAll('a[href^="#"]');
+const pageSections = Array.from(navAnchors)
+  .map((link) => document.querySelector(link.getAttribute("href")))
+  .filter(Boolean);
 const skillsSection = document.getElementById("skills");
 const skillCards = document.querySelectorAll(".skill-card");
 const projectsSection = document.getElementById("projects");
@@ -53,13 +57,56 @@ menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("open");
 });
 
-navAnchors.forEach((link) => {
-  link.addEventListener("click", () => {
-    navAnchors.forEach((l) => l.classList.remove("active"));
-    link.classList.add("active");
+const setActiveNavLink = (sectionId) => {
+  navAnchors.forEach((link) => {
+    const isActive = link.getAttribute("href") === `#${sectionId}`;
+    link.classList.toggle("active", isActive);
+  });
+};
+
+scrollLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const targetId = link.getAttribute("href");
+    const targetSection = targetId === "#" ? document.body : document.querySelector(targetId);
+
+    if (!targetSection) {
+      return;
+    }
+
+    event.preventDefault();
+    targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+
+    if (targetId !== "#") {
+      history.pushState(null, "", targetId);
+    }
+
+    if (link.closest(".nav-links")) {
+      setActiveNavLink(targetId.slice(1));
+    }
+
     navLinks.classList.remove("open");
   });
 });
+
+if (pageSections.length) {
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      const visibleSection = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+      if (visibleSection) {
+        setActiveNavLink(visibleSection.target.id);
+      }
+    },
+    {
+      rootMargin: "-25% 0px -55% 0px",
+      threshold: [0.2, 0.45, 0.7],
+    }
+  );
+
+  pageSections.forEach((section) => sectionObserver.observe(section));
+}
 
 skillCards.forEach((card, index) => {
   card.style.setProperty("--delay", `${index * 90}ms`);
