@@ -79,9 +79,9 @@ Recommended (for best development workflow):
 ## Assets
 
 - Profile and social icons are stored in `images/`
-- Project thumbnails and CV image are stored in `images/image/`
+- Project thumbnails and CV file are stored in `images/image/`
 - Current CV download source:
-  - `images/image/CV (6).jpg`
+  - `images/image/Reach.CV.pdf`
 
 ## Notes
 
