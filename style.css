@@ -939,6 +939,7 @@ background: linear-gradient(140deg, #080c23);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
   margin-bottom: 7.2px;
 }
 
@@ -950,22 +951,28 @@ background: linear-gradient(140deg, #080c23);
 .skill-brand {
   display: inline-flex;
   align-items: center;
-  gap: 5.6px;
+  gap: 8px;
   font-weight: 600;
   font-size: 12.48px;
+  min-width: 0;
 }
 
-.skill-logo {
-  width: 14px;
-  height: 14px;
-  object-fit: contain;
+.skill-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  font-size: 17px;
   background: #fff6ea;
   border: 1px solid #f5dfc6;
-  border-radius: 4px;
-  padding: 1px;
+  border-radius: 6px;
+  color: #f97316;
 }
 
 .skill-level {
+  flex: 0 0 auto;
   font-size: 10.56px;
   color: #f59e0b;
   font-weight: 600;
